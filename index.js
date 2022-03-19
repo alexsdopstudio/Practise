@@ -2,6 +2,7 @@
 
 const chuckNorrisUrl = 'https://api.chucknorris.io/jokes/random';
 const jsonPlaceHolderUrl = 'https://jsonplaceholder.typicode.com/users';
+const randomImageURL = 'https://picsum.photos/200';
 
 // *** APIs SECTION ***
 
@@ -15,6 +16,11 @@ const jsonPlaceHolderAPI = async () => {
   let responseRaw = await fetch(jsonPlaceHolderUrl);
   let responseJson = await responseRaw.json();
   return responseJson;
+};
+
+const randomImageAPI = async () => {
+  let response = await fetch(randomImageURL);
+  return response.url;
 };
 
 // *** CONSUMERs SECTION ***
@@ -46,9 +52,21 @@ userAddress();
 // CONSUMER OF chuckNorrisAPI
 const joke = async () => {
   let data = await chuckNorrisAPI();
-  console.log(data.value);
+  //console.log(data.value);
 };
-joke();
+//joke();
+
+const image = async () => {
+  let data = await randomImageAPI();
+  document.getElementById('imageArea').src = data;
+  document.getElementById('imageArea2').src = data;
+  console.log(data);
+};
+
+var button = document.getElementById('subButton');
+button.onclick = () => {
+  image();
+};
 
 //.
 //.
