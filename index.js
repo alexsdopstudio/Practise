@@ -52,14 +52,15 @@ userAddress();
 // CONSUMER OF chuckNorrisAPI
 const joke = async () => {
   let data = await chuckNorrisAPI();
-  //console.log(data.value);
+  console.log(data.value);
 };
-//joke();
+joke();
 
+
+// CONSUMER OF randoImageAPI
 const image = async () => {
   let data = await randomImageAPI();
   document.getElementById('imageArea').src = data;
-  document.getElementById('imageArea2').src = data;
   console.log(data);
 };
 
