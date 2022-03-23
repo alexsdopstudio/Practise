@@ -33,7 +33,7 @@ const userEmails = async () => {
   });
   console.log(emails);
 };
-userEmails();
+//userEmails();
 
 // CONSUMER OF jsonPlaceHolderAPI
 const userAddress = async () => {
@@ -43,7 +43,7 @@ const userAddress = async () => {
   });
   console.log(address);
 };
-userAddress();
+//userAddress();
 
 //.
 //.
@@ -54,19 +54,21 @@ const joke = async () => {
   let data = await chuckNorrisAPI();
   console.log(data.value);
 };
-joke();
-
+//joke();
 
 // CONSUMER OF randoImageAPI
 const image = async () => {
   let data = await randomImageAPI();
   document.getElementById('imageArea').src = data;
-  console.log(data);
+  //console.log(data);
 };
 
 var button = document.getElementById('subButton');
+
 button.onclick = () => {
-  image();
+  userAddress();
+  userEmails();
+  joke();
 };
 
 //.
