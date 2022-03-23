@@ -63,6 +63,10 @@ const image = async () => {
   //console.log(data);
 };
 
+//.
+//.
+//.
+
 var button = document.getElementById('subButton');
 var button2 = document.getElementById('subButton2');
 
@@ -77,9 +81,5 @@ button2.onclick = () => {
   joke();
   userEmails();
 };
-
-//.
-//.
-//.
 
 // END CONSUMER SECTION
