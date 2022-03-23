@@ -63,12 +63,19 @@ const image = async () => {
   //console.log(data);
 };
 
-
 var button = document.getElementById('subButton');
-button.onclick = () => {
+var button2 = document.getElementById('subButton2');
+
+button.onclick = async () => {
+  await userAddress();
+  await joke();
+  await userEmails();
+};
+
+button2.onclick = () => {
   userAddress();
-  userEmails();
   joke();
+  userEmails();
 };
 
 //.
